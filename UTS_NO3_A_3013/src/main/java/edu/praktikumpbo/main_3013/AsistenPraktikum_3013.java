@@ -8,68 +8,45 @@ package edu.praktikumpbo.main_3013;
  *
  * @author ASUS
  */
-public class AsistenPraktikum_3013 extends Mahasiswa_3013 implements Pendapatan_3013{
-    String mkAsistensi;
-    private int jmlPertemuan;
-    String unitKerja;
-
-    public AsistenPraktikum_3013(String nim, String nama, String jurusan, int Ipk) {
-        this(Ipk, 0, nim, nama, 0);
+public class AsistenPraktikum_3013 extends Mahasiswa_3013 implements iPendapatan_3013 {
+    private String mkAsistensi_3013;
+    private int jmlPertemuan_3013;
+    double totalPendapatan_3013;
+    
+    public AsistenPraktikum_3013(String nim_3013,String nama_3013,String jurusan_3013,float ipk_3013,String mkAsistensi_3013,int jmlPertemuan_3013){
+        super(nim_3013,nama_3013,jurusan_3013,ipk_3013);
+        this.jmlPertemuan_3013 = jmlPertemuan_3013;
+        this.mkAsistensi_3013 = mkAsistensi_3013;
+    }
+    public void setMkAsistensi_3013(String mkAsistensi_3013) {
+        this.mkAsistensi_3013 = mkAsistensi_3013;
+    }
+    public String getMkAsistensi_3013() {
+        return mkAsistensi_3013;
+    }
+    public void setJmlPertemuan_3013(int jmlPertemuan_3013) {
+        this.jmlPertemuan_3013 = jmlPertemuan_3013;
+    }
+    public int getJmlPertemuan_3013() {
+        return jmlPertemuan_3013;
+    }
+    public void tampilDataMhs_3013() {
+        System.out.println("NIM                     : " + nim_3013);
+        System.out.println("Nama                    : " + nama_3013);
+        System.out.println("Jurusan                 : " + jurusan_3013);
+        System.out.println("IPK                     : " + ipk_3013);
+        System.out.println("MK Asistentsi           : " + mkAsistensi_3013);
+        System.out.println("Jumlah Pertemuan        : " + jmlPertemuan_3013);
+        System.out.println("--------------------------------------------");
+        System.out.println("Total Pendapatan        : "+ totalPendapatan_3013());
+        System.out.println("");
     }
 
-    public AsistenPraktikum_3013(int Ipk, int par1, String nim, String nama, int par4) {
-        super(nim, nama, jurusan, Ipk);
-    }
-
-    public String getMkAsistensi() {
-        return mkAsistensi;
-    }
-
-    public void setMkAsistensi(String mkAsistensi) {
-        this.mkAsistensi = mkAsistensi;
-    }
-
-    public int getJmlPertemuan() {
-        return jmlPertemuan;
-    }
-
-    public void setJmlPertemuan(int jmlPertemuan) {
-        this.jmlPertemuan = jmlPertemuan;
-    }
-
-    public void tampilDataMhs() {
-        System.out.println("NIM                     : " + nim);
-        System.out.println("Nama                    : " + nama);
-        System.out.println("Jurusan                 : " + jurusan);
-        System.out.println("IPK                     : " + Ipk);
-        System.out.println("MK Asistentsi           : " + mkAsistensi);
-        System.out.println("Jumlah Pertemuan        : " + jmlPertemuan);
-        System.out.println("-----------------------------------------");
-    }
-
-    @Override
-    public double totalPendapatan() {
-        double totalPendapatan;
-
-        return totalPendapatan = jmlPertemuan * 50000;
-
-    }
-
-    @Override
-    public void showData() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void mkAsistensi(int parseInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void jmlPertemuan(int parseInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void jamKerja(int parseInt) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double totalPendapatan_3013() {
+        totalPendapatan_3013 = jmlPertemuan_3013 * 50000;
+        return totalPendapatan_3013;
     }
 
 }
+
+

@@ -9,17 +9,18 @@ package edu.praktikumpbo.main_3013;
  * @author ASUS
  */
 public abstract class Mahasiswa_3013 {
-    protected String nim;
-    protected String nama;
-    protected String jurusan;
-    protected int Ipk;
+    protected String nim_3013;
+    protected String nama_3013;
+    protected String jurusan_3013;
+    protected float ipk_3013;
     
-    public Mahasiswa_3013(String nim, String nama, String jurusan, int Ipk){
-        this.nim = nim;
-        this.nama = nama;
-        this.jurusan = jurusan;
-        this.Ipk = Ipk;
+    public Mahasiswa_3013(String nim_3013,String nama_3013,String jurusan_3013,float ipk_3013){
+        this.ipk_3013 = ipk_3013;
+        this.jurusan_3013 = jurusan_3013;
+        this.nama_3013 = nama_3013;
+        this.nim_3013 = nim_3013;
     }
-    public abstract void showData();
+    public abstract void tampilDataMhs_3013();
 }
+
 
